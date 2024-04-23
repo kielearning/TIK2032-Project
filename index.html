@@ -38,7 +38,7 @@
     <!-- home -->
     <div class="container-home" id = "home">
       <img src="image/profil1.jpg" alt="">
-      <h1>Jeheskiel Victor Liwe</h1>
+      <h1 id="typewriter"></h1>
       <p>A Student</p>
     </div>
 
@@ -52,89 +52,37 @@
     </div>
 
   <!-- blog -->
-    <section id="blog">
-        <h2>Blog</h2>
-        <article>
-          <h2>Tips Merawat Tanaman Hias agar Tumbuh Subur dan Indah</h2>
-          <p>
-            Tanaman hias dapat membawa keindahan dan kesegaran ke dalam rumah. Namun, merawatnya agar tumbuh subur dan indah membutuhkan perhatian dan pengetahuan khusus. Dalam artikel ini, kita akan membahas beberapa tips penting untuk
-            merawat tanaman hias, mulai dari pemilihan jenis tanaman yang sesuai dengan kondisi rumah, penyiraman yang tepat, pemupukan, hingga pencegahan hama dan penyakit.
-          </p>
-          <p>Sumber: <a href="https://www.gardeningknowhow.com/houseplants/" target="_blank">Gardening Know How - Houseplants</a></p>
-        </article>
-
-        <div>
+  <section id="blog">
+    <h2 style="padding-left: 20%; padding-right: 20%;">Blog</h2>
+    <div class="container-blog" style="padding-left: 20%; padding-right: 20%;" id="blogContainer">
+       
         </div>
-
-        <article>
-          <h2>Manfaat Bersepeda untuk Kesehatan Fisik dan Mental</h2>
-          <p>Bersepeda adalah aktivitas fisik yang menyenangkan dan menyehatkan. Selain mudah dilakukan, bersepeda juga menawarkan banyak manfaat bagi kesehatan fisik dan mental.</p>
-          <p>
-            Dalam artikel ini, kita akan membahas beberapa manfaat bersepeda, seperti meningkatkan kebugaran kardiovaskular, memperkuat otot, menurunkan berat badan, dan meningkatkan mood. Kita juga akan membahas tips untuk memulai
-            bersepeda dengan aman dan nyaman.
-          </p>
-          <p>Sumber: <a href="https://www.mayoclinic.org/healthy-lifestyle/fitness/in-depth/bicycling/art-20045845" target="_blank">Mayo Clinic - Bicycling</a></p>
-        </article>
-
-        <article>
-          <h2>5 Destinasi Wisata Alam di Indonesia yang Wajib Dikunjungi</h2>
-          <p>
-            Indonesia terkenal dengan keindahan alamnya yang luar biasa. Dari pantai berpasir putih yang indah hingga pegunungan yang menjulang tinggi, Indonesia menawarkan berbagai macam destinasi wisata alam yang menarik untuk dikunjungi.
-          </p>
-          <p>
-            Dalam artikel ini, kita akan membahas 5 destinasi wisata alam di Indonesia yang wajib dikunjungi, seperti Raja Ampat, Taman Nasional Komodo, Gunung Bromo, Danau Toba, dan Ubud. Kita juga akan membahas tips untuk merencanakan
-            perjalanan wisata alam yang aman dan menyenangkan.
-          </p>
-          <p>Sumber: <a href="https://www.indonesia.travel/en/destination/nature" target="_blank">Wonderful Indonesia - Nature</a></p>
-        </article>
-      </section>
-
-      <div>
-
-      </div>
+    </div>
+   
+    <div style="text-align:center; padding-top: 20px;" >
+        
+        
+      <a href="#about" class="buttonClass" onclick="loadBlog()" id="loadBlogButton" style="padding: 10px;">Tekan Untuk Melihat Artikel</a>
+      <a href="#about" class="buttonClass" onclick="previousBlog()" id="previousBlogButton" style="display: none">Sebelumnya</a>
+      <a href="#about" class="buttonClass" onclick="nextBlog()" id="nextBlogButton" style="display: none;">next</a>
+    </div>
+</section>
 
     <!-- Galerry -->
-    <div class="container-gallery" id = "gallery">
+    <div class="container-gallery"id="gallery" >
       <h1>Gallery</h1>
       <hr class="split">
-      <div class="cards">
-
-        <a href="">
-          <div class="card">
-            <img src= "image/Frame-42-14.png" alt="">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
-
-        <a href="">
-          <div class="card">
-            <img src="image/teknologi_komunikasi_informasi.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
-
-        <a href="">
-          <div class="card">
-            <img src="image/contoh-teknologi-informasi.jpg" alt="">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
-
-        <a href="">
-          <div class="card">
-            <img src="image/desain-cyberpunk.webp" alt="">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
-
-        <a href="">
-          <div class="card">
-            <img src="image/images.jpeg" alt="">
-            <p>Lorem ipsum dolor sit amet.</p>
-          </div>
-        </a>
+      <div class="container" id="galleryContainer">
+       
+      </div>
+      <div style="text-align:center; padding-top: 20px;" >
         
-
+        
+        <a href="#gallery" class="buttonClass" onclick="loadGallery()" id="loadGalleryButton" style="padding: 10px;">Tekan Untuk Melihat Gallery</a>
+        <a href="#gallery" class="buttonClass" onclick="previousGallery()" id="previousGalleryButton" style="display: none">Sebelumnya</a>
+        <a href="#gallery" class="buttonClass" onclick="nextGallery()" id="nextGalleryButton" style="display: none;">next</a>
+      </div>
+    </div>
     <!-- contact -->
     <section id="contact">
         <h2>Contact</h2>
@@ -163,5 +111,17 @@
     <!-- script -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src = "script.js"> </script>
+    <script>var text = "Jeheskiel Victor Liwe";
+      var speed = 100; // milliseconds per character
+      
+      function typeWriter() {
+          if (text.length > 0) {
+              document.getElementById("typewriter").innerHTML += text.charAt(0);
+              text = text.substring(1);
+              setTimeout(typeWriter, speed);
+          }
+      }
+      
+      typeWriter();</script>
   </body>
 </html>

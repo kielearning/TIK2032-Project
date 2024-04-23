@@ -301,4 +301,75 @@
       width: 200px;
     }
   }
+
+
+  .container-gallery {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   
+  .container-gallery h1 {
+    margin-bottom: 10px;
+  }
+  
+  .container-gallery .container {
+    display: flex;
+    justify-content: space-between;
+    width: 800px; /* Sesuaikan lebar galeri dengan kebutuhan Anda */
+  }
+  
+  .container-gallery .card {
+    width: 250px; /* Sesuaikan lebar gambar dengan kebutuhan Anda */
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    padding: 0 0 5px;
+  }
+  
+  .container-gallery .card img {
+    width: 100%;
+  }
+  
+  .container-gallery .card p {
+    color: black;
+    padding: 10px;
+  }
+  
+  @media (max-width: 992px) {
+    .container-gallery .container {
+      flex-direction: column;
+      align-items: center;
+      width: 100%; /* Mengubah lebar galeri menjadi penuh ketika layar kecil */
+    }
+  
+    .container-gallery .card {
+      width: 90%; /* Mengubah lebar gambar menjadi penuh ketika layar kecil */
+    }
+  }
+
+  .buttonClass {
+    font-size:15px;
+    font-family:Arial;
+    width:140px;
+    height:50px;
+    border-width:1px;
+    color:#fff;
+    border-color:#566963;
+    font-weight:bold;
+    border-top-left-radius:5px;
+    border-top-right-radius:5px;
+    border-bottom-left-radius:5px;
+    border-bottom-right-radius:5px;
+    box-shadow:inset 0px 1px 3px 0px #91b8b3;
+    text-shadow:inset 0px -1px 0px #2b665e;
+    background:linear-gradient(#768d87, #6c7c7c);
+  }
+  
+  .buttonClass:hover {
+    background: linear-gradient(#6c7c7c, #768d87);
+  }
+                  
